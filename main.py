@@ -1,20 +1,19 @@
 import turtle
 from random import *
 import time
+turtle.hideturtle()
 
 screen = turtle.Screen()
 
-bank = ["Not likely", "Hm, I'm not sure", "Why do you ask", "Yes", "No", "ABSOLUTELY NOT", "Ask again", "I guess"]
 
 def drawPig():
-  turtle.clearscreen()
   screen.setup(568,563)
   screen.bgpic("AskPeppa.png")
 drawPig()
 
-def ask():
-  answer = screen.textinput("Ask a Question", "Or type quit to exit")
-ask()
+answer = screen.textinput("Ask a Question", "Or type quit to exit")
+
+bank = ["Not likely", "Hm, I'm not sure", "Why do you ask", "Yes", "No", "ABSOLUTELY NOT", "Ask again", "I guess"]
 
 while (answer != "quit"):
   turtle.write("You asked: " +answer, align="center", font=("Times New Roman",20, "bold"))
